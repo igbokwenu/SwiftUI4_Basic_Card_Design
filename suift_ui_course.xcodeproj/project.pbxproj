@@ -54,12 +54,12 @@
 		CD6C1B1E2A509C59001C9230 /* suift_ui_course */ = {
 			isa = PBXGroup;
 			children = (
+				CDCEE60F2A54DB980032ECD7 /* ReusableViews */,
 				CD6C1B1F2A509C59001C9230 /* suift_ui_courseApp.swift */,
 				CD6C1B212A509C59001C9230 /* ContentView.swift */,
 				CD6C1B232A509C5D001C9230 /* Assets.xcassets */,
 				CD6C1B252A509C5D001C9230 /* suift_ui_course.entitlements */,
 				CD6C1B262A509C5D001C9230 /* Preview Content */,
-				CDCEE60D2A54DA3E0032ECD7 /* CustomCard.swift */,
 			);
 			path = suift_ui_course;
 			sourceTree = "<group>";
@@ -70,6 +70,14 @@
 				CD6C1B272A509C5D001C9230 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CDCEE60F2A54DB980032ECD7 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				CDCEE60D2A54DA3E0032ECD7 /* CustomCard.swift */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

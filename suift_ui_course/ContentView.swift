@@ -16,12 +16,13 @@ struct ContentView: View {
 // Note: -ZStack
        
         ZStack {
-            let dimension: Double = 22
+            
             Color.teal
             
             
             VStack(alignment: .center) {
                 VStack {
+                    let dimension: Double = 22
                     Image("lion-wallpaper").resizable()
                             .aspectRatio(contentMode: .fit)
                             .cornerRadius(/*@START_MENU_TOKEN@*/15.0/*@END_MENU_TOKEN@*/).padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
