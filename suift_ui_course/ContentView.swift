@@ -11,7 +11,7 @@ struct ContentView: View {
    @State var imageSize = 25.0
     @State var age: Int = 33
     var body: some View {
-        let names: String = "Increase"
+        let names: String = "Increase Okechukwu"
         
        
         VStack(alignment: .center) {
@@ -26,7 +26,7 @@ struct ContentView: View {
             
             
             Text("Hi")
-            Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
+            Button("Press Me") {
 //                if age > 32 {
                     age = Int.random(in: 30...45)
                     print("Button pressed")
