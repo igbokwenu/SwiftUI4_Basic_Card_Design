@@ -25,7 +25,7 @@ struct ContentView: View {
                 .padding(.bottom, 1.0)
             
             
-            Text("Hi")
+            Text("Hello People").font(.headline).fontWeight(.heavy)
             Button("Press Me") {
 //                if age > 32 {
                     age = Int.random(in: 30...45)
