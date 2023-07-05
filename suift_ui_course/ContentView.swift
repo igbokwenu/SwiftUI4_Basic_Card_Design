@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
    @State var imageSize = 25.0
     @State var year = Calendar.current.component(.year, from: Date())
+    @State var opacityNumber: Double = 0.8
     var body: some View {
         let names: String = "Okechukwu"
         
@@ -26,12 +27,16 @@ struct ContentView: View {
                 VStack(alignment: .center) {
                     Spacer().frame(height: 30)
                     
-                    CustomCard(name: "Mufasa", age: "17", status: "Leader", state: "Dead", notes: "Was setup, betrayed and killed by his brother Scar.", imageString: "lion-wallpaper")
+                    Button("Remove Card Opacity") {
+                        opacityNumber = 1
+                    }.padding(.all, 8.0).background(Color.white).cornerRadius(15)
+                    
+                    CustomCard(name: "Mufasa", age: "17", status: "Leader", state: "Dead", notes: "Betrayed and killed by his spieful brother Scar.", imageString: "lion-wallpaper", opacityDouble: opacityNumber)
                     
         
-                    CustomCard(name: "Simba", age: "6", status: "In Exile", state: "Alive", notes: "Was setup by his uncle Scar, and was forced to go into exile.", imageString: "african lion")
+                    CustomCard(name: "Simba", age: "6", status: "In Exile", state: "Alive", notes: "Was almost killed by his uncle Scar, and was forced into exile.", imageString: "african lion", opacityDouble: opacityNumber)
                     
-                    CustomCard(name: "Ada", age: "Eternal", status: "Spirit", state: "Omnipresent", notes: "An ancient guardian spirit of the forests known to appear in different forms.", imageString: "african scenery")
+                    CustomCard(name: "Ada", age: "Eternal", status: "Spirit", state: "Omnipresent", notes: "An ancient guardian spirit of the forests known to appear in different forms.", imageString: "african scenery", opacityDouble: opacityNumber)
                         .padding(.bottom)
                     Text("Designed by, \(names) in the year \(String(year))!")
                         .fontWeight(.bold).foregroundColor(Color.white)

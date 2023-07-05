@@ -15,6 +15,7 @@ struct CustomCard: View {
     var state: String = ""
     var notes: String = ""
     var imageString: String = "lion-wallpaper"
+    var opacityDouble: Double = 0.8
     var body: some View {
         let dimension: Double = 22
         
@@ -66,13 +67,13 @@ struct CustomCard: View {
                                 
                         }
                         .padding(.all, 10)
-                        .background(Color.white.opacity(0.8).cornerRadius(15)).shadow(radius: 10)
+                        .background(Color.white.opacity(opacityDouble).cornerRadius(15)).shadow(radius: 10)
             } else {
                 Color.pink
                     .frame(width: 10, height: 100)
                     .opacity(0)
                     .onAppear {
-                        withAnimation(Animation.easeInOut(duration: 1.0).delay(3.0)) {
+                        withAnimation(Animation.easeInOut(duration: 1.0).delay(1.0)) {
                             isHidden.toggle()
                         }
                     }
