@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
    @State var imageSize = 25.0
-    @State var age: Int = 33
+    @State var year: Int = 2023
     var body: some View {
-        let names: String = "Increase Okechukwu"
+        let names: String = "Okechukwu"
         
 // Note: -ZStack
        
@@ -22,7 +22,7 @@ struct ContentView: View {
                            .resizable()
             
             
-            ScrollView {
+            ScrollView (showsIndicators: true) {
                 VStack(alignment: .center) {
                     Spacer().frame(height: 30)
                     
@@ -32,37 +32,32 @@ struct ContentView: View {
                     CustomCard(name: "Simba", age: "6", status: "In Exile", state: "Alive", notes: "Was setup by his uncle Scar, and was forced to go into exile.", imageString: "african lion")
                     
                     CustomCard(name: "Ada", age: "Eternal", status: "Spirit", state: "Omnipresent", notes: "An ancient guardian spirit of the forests known to appear in different forms.", imageString: "african scenery")
-                    
-                   
-                   
-                    
-                    
-               
-                    Text("Hello, \(names) to the new world of wonders! Age is \(age)!")
-                        .fontWeight(.bold)
+                        .padding(.bottom)
+                    Text("Designed by, \(names) in the year \(String(year))!")
+                        .fontWeight(.bold).foregroundColor(Color.white)
                         .multilineTextAlignment(.center)
-                        .padding(.bottom, 1.0)
+                        
                     
                     
                     Text("Hello People").font(.headline).fontWeight(.heavy)
                     Button("Press Me") {
         //                if age > 32 {
-                            age = Int.random(in: 30...45)
+                            year = Int.random(in: 1820...1967)
                             print("Button pressed")
         //                }
                         
                     }
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.black/*@END_MENU_TOKEN@*/)
+                    .background(Color.white)
                     .buttonStyle(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=Button Style@*/DefaultButtonStyle()/*@END_MENU_TOKEN@*/).cornerRadius(10)
                     Button {
-                        imageSize = Double.random(in: 20...35)
+                        imageSize = Double.random(in: 20...135)
                         
                         print("I was clicked")
                     } label: {
                         HStack{
-                            Image(systemName: "car").resizable().frame(width: imageSize, height: imageSize)
-                            Text("Size: \(Int(imageSize.nextDown))")
+                            Image(systemName: "car").resizable().frame(width: imageSize, height: imageSize).foregroundColor(Color.white)
+                            Text(verbatim: "Size: \(Int(imageSize.nextDown))").foregroundColor(Color.white)
 
                         }
                     }
