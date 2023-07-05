@@ -17,97 +17,60 @@ struct ContentView: View {
        
         ZStack {
             
-            Color.teal
+//            Color.teal
             
             
-            VStack(alignment: .center) {
-                VStack {
-                    let dimension: Double = 22
-                    Image("lion-wallpaper").resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .cornerRadius(/*@START_MENU_TOKEN@*/15.0/*@END_MENU_TOKEN@*/).padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
-                        
-                    HStack {
-                        
-                        Image(systemName: "person.circle").resizable().frame(width: dimension, height: dimension).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                        Text("Name: Mufasa")
-                            .font(.title2).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+            
+            ScrollView {
+                VStack(alignment: .center) {
+                    Spacer().frame(height: 30)
                     
-                        Spacer()
-                        Image(systemName: "arrowshape.turn.up.right").resizable().frame(width: dimension, height: dimension).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                        Text("Age: 17")
-                            .font(.title2).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                          
-                    }
-                    .padding(.all)
-                    HStack {
-                        Image(systemName: "scribble.variable").resizable().frame(width: dimension, height: dimension).foregroundColor(.orange)
-                        Text("Status: Leader")
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.trailing)
-                        .padding(.top, 1.0).foregroundColor(.orange)
-                        Spacer()
-                        Image(systemName: "questionmark.folder").resizable().frame(width: dimension, height: dimension).foregroundColor(.orange)
-                        Text("State: Dead")
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.trailing)
-                            .padding(.top, 1.0).foregroundColor(.orange)
-                    }
-                    .padding(.horizontal)
-                    HStack {
-                        Image(systemName: "note.text").resizable().frame(width: dimension, height: dimension).foregroundColor(.blue)
-                        Text("Cause of death: Betrayed By Brother")
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.trailing)
-                        .padding(.top, 1.0).foregroundColor(.blue)
-                    }
-                        
-                        
-                }
-                .padding(.bottom)
-                .background(Color.white.cornerRadius(15))
-                
-                
-                Image(systemName: "globe")
-                    .padding(.bottom)
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("Hello, \(names) to the new world of wonders! Age is \(age)!")
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom, 1.0)
-                
-                
-                Text("Hello People").font(.headline).fontWeight(.heavy)
-                Button("Press Me") {
-    //                if age > 32 {
-                        age = Int.random(in: 30...45)
-                        print("Button pressed")
-    //                }
+                    CustomCard(name: "Mufasa", age: "17", status: "Leader", state: "Dead", notes: "Was setup, betrayed and killed by his brother Scar.", imageString: "lion-wallpaper")
                     
-                }
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.black/*@END_MENU_TOKEN@*/)
-                .buttonStyle(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=Button Style@*/DefaultButtonStyle()/*@END_MENU_TOKEN@*/).cornerRadius(10)
-                Button {
-                    imageSize = Double.random(in: 20...35)
+        
+                    CustomCard(name: "Simba", age: "6", status: "In Exile", state: "Alive", notes: "Was setup by his uncle Scar, and was forced to go into exile.", imageString: "african lion")
                     
-                    print("I was clicked")
-                } label: {
-                    HStack{
-                        Image(systemName: "car").resizable().frame(width: imageSize, height: imageSize)
-                        Text("Size: \(Int(imageSize.nextDown))")
+                    CustomCard(name: "Ada", age: "Eternal", status: "Spirit", state: "Omnipresent", notes: "An ancient guardian spirit of the forests known to appear in different forms.", imageString: "african scenery")
+                    
+                   
+                   
+                    
+                    
+               
+                    Text("Hello, \(names) to the new world of wonders! Age is \(age)!")
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom, 1.0)
+                    
+                    
+                    Text("Hello People").font(.headline).fontWeight(.heavy)
+                    Button("Press Me") {
+        //                if age > 32 {
+                            age = Int.random(in: 30...45)
+                            print("Button pressed")
+        //                }
+                        
+                    }
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.black/*@END_MENU_TOKEN@*/)
+                    .buttonStyle(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=Button Style@*/DefaultButtonStyle()/*@END_MENU_TOKEN@*/).cornerRadius(10)
+                    Button {
+                        imageSize = Double.random(in: 20...35)
+                        
+                        print("I was clicked")
+                    } label: {
+                        HStack{
+                            Image(systemName: "car").resizable().frame(width: imageSize, height: imageSize)
+                            Text("Size: \(Int(imageSize.nextDown))")
 
+                        }
                     }
-                }
-                .padding(.top)
+                    .padding(.top)
 
-                
+                    
+                }
+                .padding()
             }
-            .padding()
         }
         .ignoresSafeArea()
         
