@@ -47,7 +47,7 @@ struct ContentView: View {
                         CustomCard(name: "Ada", age: "Eternal", status: "Spirit", state: "Omnipresent", notes: "An ancient guardian spirit of the forests known to appear in different forms.", imageString: "african scenery", opacityDouble: opacityNumber)
                             .padding(.bottom)
                     }
-                    Text("Designed by \(names) in the year \(String(year))!")
+                    Text("Designed by \(names) in the year \(String(year))")
                         .fontWeight(.bold).foregroundColor(Color.white)
                         .multilineTextAlignment(.center)
                         
