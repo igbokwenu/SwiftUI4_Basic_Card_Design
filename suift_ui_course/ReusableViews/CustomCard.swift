@@ -15,6 +15,7 @@ struct CustomCard: View {
     var notes: String = ""
     var imageString: String = "lion-wallpaper"
     var body: some View {
+        
         VStack {
             let dimension: Double = 22
             Image(imageString).resizable()
@@ -23,46 +24,46 @@ struct CustomCard: View {
                 
             HStack {
                 
-                Image(systemName: "person.circle").resizable().frame(width: dimension, height: dimension).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                Image(systemName: "person.circle").resizable().frame(width: dimension, height: dimension).foregroundColor(.orange)
                 Text("Name: \(name)")
                     .font(.title2).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             
                 Spacer()
                 Image(systemName: "arrowshape.turn.up.right").resizable().frame(width: dimension, height: dimension).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 Text("Age: \(age)")
-                    .font(.title2).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                    .font(.title2).foregroundColor(.brown)
                   
             }
             .padding(.all)
             HStack {
-                Image(systemName: "scribble.variable").resizable().frame(width: dimension, height: dimension).foregroundColor(.orange)
+                Image(systemName: "scribble.variable").resizable().frame(width: dimension, height: dimension).foregroundColor(.blue)
                 Text("Status: \(status)")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.trailing)
-                .padding(.top, 1.0).foregroundColor(.orange)
+                .padding(.top, 1.0).foregroundColor(.black)
                 Spacer()
                 Image(systemName: "questionmark.folder").resizable().frame(width: dimension, height: dimension).foregroundColor(.orange)
                 Text("State: \(state)")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.trailing)
-                    .padding(.top, 1.0).foregroundColor(.orange)
+                    .padding(.top, 1.0).foregroundColor(.black)
             }
             .padding(.horizontal)
             HStack {
-                Image(systemName: "note.text").resizable().frame(width: dimension, height: dimension).foregroundColor(.blue)
+                Image(systemName: "note.text").resizable().frame(width: dimension, height: dimension).foregroundColor(.green)
                 Text(notes)
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.leading)
-                .padding(.top, 1.0).foregroundColor(.blue)
+                    .padding(.top, 1.0).foregroundColor(.black.opacity(0.7))
             }
                 
                 
         }
         .padding(.all, 10)
-        .background(Color.white.cornerRadius(15)).shadow(radius: 10)
+        .background(Color.white.opacity(0.8).cornerRadius(15)).shadow(radius: 10)
     }
 }
 

@@ -18,7 +18,8 @@ struct ContentView: View {
         ZStack {
             
 //            Color.teal
-            
+            Image("_uhdanimals438")
+                           .resizable()
             
             
             ScrollView {
