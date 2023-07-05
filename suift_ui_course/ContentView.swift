@@ -15,12 +15,8 @@ struct ContentView: View {
       @State private var buttonText = "To Remove Card Opacity, Click Here"
     var body: some View {
         let names: String = "Okechukwu"
-        
-// Note: -ZStack
        
         ZStack {
-            
-//            Color.teal
             Image("_uhdtexture72")
                            .resizable()
             
@@ -41,19 +37,16 @@ struct ContentView: View {
                         }
                         
                     }.padding(.all, 8.0).background(Color.white).cornerRadius(15).opacity(opacityNumber)
-                    
-                    CustomCard(name: "Mufasa", age: "17", status: "Leader", state: "Dead", notes: "Betrayed and killed by his spieful brother Scar.", imageString: "lion-wallpaper", opacityDouble: opacityNumber)
-                        .onTapGesture {
-                            withAnimation {
-                               
-                            }
-                        }
-                    
-                    CustomCard(name: "Simba", age: "6", status: "In Exile", state: "Alive", notes: "Was almost killed by his uncle Scar, and was forced into exile.", imageString: "african lion", opacityDouble: opacityNumber)
-        
-                    CustomCard(name: "Scar", age: "18", status: "Ruler", state: "Alive", notes: "A treacherous uncle and brother who would kill his family for the throne", imageString: "lion_bloody", opacityDouble: opacityNumber)
-                    CustomCard(name: "Ada", age: "Eternal", status: "Spirit", state: "Omnipresent", notes: "An ancient guardian spirit of the forests known to appear in different forms.", imageString: "african scenery", opacityDouble: opacityNumber)
-                        .padding(.bottom)
+             
+                    /// Grouped CustomCard: Will use a looop for the view later
+                    Group{
+                        CustomCard(name: "Mufasa", age: "17", status: "Leader", state: "Dead", notes: "Betrayed and killed by his spieful brother Scar.", imageString: "lion-wallpaper", opacityDouble: opacityNumber)
+                        CustomCard(name: "Simba", age: "6", status: "In Exile", state: "Alive", notes: "Was almost killed by his uncle Scar, and was forced into exile.", imageString: "african lion", opacityDouble: opacityNumber)
+            
+                        CustomCard(name: "Scar", age: "18", status: "Ruler", state: "Alive", notes: "A treacherous uncle and brother who would kill his family for the throne", imageString: "lion_bloody", opacityDouble: opacityNumber)
+                        CustomCard(name: "Ada", age: "Eternal", status: "Spirit", state: "Omnipresent", notes: "An ancient guardian spirit of the forests known to appear in different forms.", imageString: "african scenery", opacityDouble: opacityNumber)
+                            .padding(.bottom)
+                    }
                     Text("Designed by \(names) in the year \(String(year))!")
                         .fontWeight(.bold).foregroundColor(Color.white)
                         .multilineTextAlignment(.center)

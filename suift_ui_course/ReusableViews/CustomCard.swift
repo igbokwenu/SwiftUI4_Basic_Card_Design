@@ -71,10 +71,10 @@ struct CustomCard: View {
                         .background(Color.white.opacity(opacityDouble).cornerRadius(15)).shadow(radius: 10)
             } else {
                 Color.pink
-                    .frame(width: 10, height: 100)
+                    .frame(width: 10, height: 60)
                     .opacity(0)
                     .onAppear {
-                        withAnimation(Animation.easeInOut(duration: 1.0).delay(1.0)) {
+                        withAnimation(Animation.easeInOut(duration: 1.0).delay(2.0)) {
                             isHidden.toggle()
                         }
                     }
