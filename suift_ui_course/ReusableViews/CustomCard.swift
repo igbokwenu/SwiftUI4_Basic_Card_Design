@@ -16,6 +16,7 @@ struct CustomCard: View {
     var notes: String = ""
     var imageString: String = "lion-wallpaper"
     var opacityDouble: Double = 0.8
+    @State private var isZoomed = false
     var body: some View {
         let dimension: Double = 22
         
