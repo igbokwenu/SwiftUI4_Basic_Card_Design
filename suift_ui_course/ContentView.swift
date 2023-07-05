@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
    @State var imageSize = 25.0
-    @State var year: Int = 2023
+    @State var year = Calendar.current.component(.year, from: Date())
     var body: some View {
         let names: String = "Okechukwu"
         
