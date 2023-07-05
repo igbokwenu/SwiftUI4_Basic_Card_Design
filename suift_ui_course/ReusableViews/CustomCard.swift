@@ -72,7 +72,7 @@ struct CustomCard: View {
                     .frame(width: 10, height: 100)
                     .opacity(0)
                     .onAppear {
-                        withAnimation(Animation.easeInOut(duration: 1.0).delay(2.0)) {
+                        withAnimation(Animation.easeInOut(duration: 1.0).delay(3.0)) {
                             isHidden.toggle()
                         }
                     }
