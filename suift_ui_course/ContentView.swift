@@ -8,101 +8,112 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isHidden = true
    @State var imageSize = 25.0
     @State var year = Calendar.current.component(.year, from: Date())
     @State var opacityNumber: Double = 0.8
     @State private var isToggled = false
       @State private var buttonText = "To Remove Card Opacity, Click Here"
+    //Here you can add your own card by specifying 
     var cardItems: [CardItem] = [
         CardItem(name: "Mufasa", age: "17", status: "Leader", state: "Dead", notes: "Betrayed and killed by his spieful brother Scar.", imageString: "lion-wallpaper", opacityDouble: 0.8),
         CardItem(name: "Simba", age: "6", status: "In Exile", state: "Alive", notes: "Was almost killed by his uncle Scar, and was forced into exile.", imageString: "african lion", opacityDouble: 0.8),
         CardItem(name: "Scar", age: "18", status: "Ruler", state: "Alive", notes: "A treacherous uncle and brother who would kill his family for the throne", imageString: "lion_bloody", opacityDouble: 0.8),
         CardItem(name: "Ada", age: "Eternal", status: "Spirit", state: "Omnipresent", notes: "An ancient guardian spirit of the forests known to appear in different forms.", imageString: "african scenery", opacityDouble: 0.8)]
     
-    var testList: [String] = ["Buffalo", "Cow", "Cobra"]
-    
     
     var body: some View {
-        let names: String = "Okechukwu"
-       
+
         ZStack {
             Image("_uhdtexture72")
                            .resizable()
             VStack {
-                Spacer().frame(height: 50)
-                Button(buttonText) {
-                    if isToggled {
-                        opacityNumber = 0.7
-                        buttonText = "Click To Remove Card Opacity"
-                        isToggled.toggle()
-                        
-                    } else {
-                        opacityNumber = 1
-                        buttonText = "Click To Make Card Transparent"
-                        isToggled.toggle()
-                    }
-                    
-                }.padding(.all, 8.0).background(Color.white).cornerRadius(15).opacity(opacityNumber)
-                List(cardItems) { item in
-                    CustomCard(name: item.name, age: item.age, status: item.status, state: item.state, notes: item.notes, imageString: item.imageString, opacityDouble: opacityNumber).listRowSeparator(.hidden).listRowBackground(Color(.clear))
-                }.listStyle(.plain)
-                                    Text("Designed by \(names) in the year \(String(year))")
-                                        .fontWeight(.bold).foregroundColor(Color.white)
-                                        .multilineTextAlignment(.center)
-                
-                
-                
-                
-                                    Button("Change Year") {
-                                            year = Int.random(in: 1820...1967)
-                                            print("Button pressed")
-                
-                                    }
-                                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                                    .background(Color.white)
-                                    .buttonStyle(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=Button Style@*/DefaultButtonStyle()/*@END_MENU_TOKEN@*/).cornerRadius(10)
-                
+                if isHidden {
+                    Color.clear
+                } else {
+                    Text("Designed by Okechukwu \(String(year))©").font(.title3).foregroundColor(.white).onAppear {
+                            withAnimation(Animation.easeInOut(duration: 1.0).delay(2.0)) {
+                                isHidden.toggle()
+                            }
+                        }
+                }
+            }.onAppear {
+                withAnimation {
+                    isHidden.toggle()
+                }
             }
-//            ScrollView (showsIndicators: true) {
-//                VStack(alignment: .center) {
-//                    Spacer().frame(height: 30)
-//                    Button(buttonText) {
-//                        if isToggled {
-//                            opacityNumber = 0.7
-//                            buttonText = "Click To Remove Card Opacity"
-//                            isToggled.toggle()
-//
-//                        } else {
-//                            opacityNumber = 1
-//                            buttonText = "Click To Make Card Transparent"
-//                            isToggled.toggle()
-//                        }
-//
-//                    }.padding(.all, 8.0).background(Color.white).cornerRadius(15).opacity(opacityNumber)
-//
-//                    Group{
-//                        CustomCard(name: "Mufasa", age: "17", status: "Leader", state: "Dead", notes: "Betrayed and killed by his spieful brother Scar.", imageString: "lion-wallpaper", opacityDouble: opacityNumber)
-//                        CustomCard(name: "Simba", age: "6", status: "In Exile", state: "Alive", notes: "Was almost killed by his uncle Scar, and was forced into exile.", imageString: "african lion", opacityDouble: opacityNumber)
-//
-//                        CustomCard(name: "Scar", age: "18", status: "Ruler", state: "Alive", notes: "A treacherous uncle and brother who would kill his family for the throne", imageString: "lion_bloody", opacityDouble: opacityNumber)
-//                        CustomCard(name: "Ada", age: "Eternal", status: "Spirit", state: "Omnipresent", notes: "An ancient guardian spirit of the forests known to appear in different forms.", imageString: "african scenery", opacityDouble: opacityNumber)
-//                            .padding(.bottom)
-//                    }
-//                    Text("Designed by \(names) in the year \(String(year))")
-//                        .fontWeight(.bold).foregroundColor(Color.white)
-//                        .multilineTextAlignment(.center)
-//
-//
-//
-//
-//                    Button("Change Year") {
-//                            year = Int.random(in: 1820...1967)
-//                            print("Button pressed")
-//
-//                    }
-//                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-//                    .background(Color.white)
-//                    .buttonStyle(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=Button Style@*/DefaultButtonStyle()/*@END_MENU_TOKEN@*/).cornerRadius(10)
+
+                List(cardItems) { item in
+                    if let index = cardItems.firstIndex(where: { $0.id == item.id }) {
+                        // Check if it's the first item in the list
+                        if index == 0 {
+                            // Place your item at the beginning
+                            VStack(alignment: .center) {
+                                Spacer().frame(height: 50)
+                                HStack {
+                                    Spacer()
+                                    Button(buttonText) {
+                                        if isToggled {
+                                            opacityNumber = 0.7
+                                            buttonText = "Click To Remove Card Opacity"
+                                            isToggled.toggle()
+                                            
+                                        } else {
+                                            opacityNumber = 1
+                                            buttonText = "Click To Make Card Transparent"
+                                            isToggled.toggle()
+                                        }
+                                        
+                                    }.padding(.all, 8.0).background(Color.white).cornerRadius(15).opacity(opacityNumber)
+                                    Spacer()
+                                }
+                            }.listRowBackground(Color(.clear))
+                        }
+                        
+                        // Render your custom card here
+                        CustomCard(name: item.name, age: item.age, status: item.status, state: item.state, notes: item.notes, imageString: item.imageString, opacityDouble: opacityNumber)
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color(.clear)).onTapGesture {
+                                // Code to be executed when the view is tapped
+                                if isToggled {
+                                    opacityNumber = 0.7
+                                    buttonText = "Click To Remove Card Opacity"
+                                    isToggled.toggle()
+                                    
+                                } else {
+                                    opacityNumber = 1
+                                    buttonText = "Click To Make Card Transparent"
+                                    isToggled.toggle()
+                                }
+                            }
+                        
+                        // Check if it's the last item in the list
+                        if index == cardItems.count - 1 {
+                            // Place your item at the end
+                            VStack {
+                                Text("Designed by Okechukwu in the year \(String(year))")
+                                    .fontWeight(.bold).foregroundColor(Color.white)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.bottom)
+            
+            
+            
+            
+                                Button("Change Year") {
+                                        year = Int.random(in: 1820...1967)
+                                        print("Button pressed")
+            
+                                }
+                                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                                .background(Color.white)
+                                .buttonStyle(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=Button Style@*/DefaultButtonStyle()/*@END_MENU_TOKEN@*/).cornerRadius(10)
+                                Spacer().frame(height: 30)
+                                    
+                            }.listRowBackground(Color(.clear))
+                        }
+                    }
+                }.listStyle(.plain)
+
 //                    Button {
 //                        imageSize = Double.random(in: 20...135)
 //
