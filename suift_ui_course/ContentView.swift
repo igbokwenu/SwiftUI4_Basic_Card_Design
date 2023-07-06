@@ -14,9 +14,9 @@ struct ContentView: View {
     @State var opacityNumber: Double = 0.8
     @State private var isToggled = false
       @State private var buttonText = "To Remove Card Opacity, Click Here"
-    //Here you can add your own card by specifying 
+    //Here you can add your own card by specifying your own card details to expand the list. You can send me a pull request to add your expansion or modifications to the main branch. Use real life pictures to represent your favourite cartoon characters and do not forget to add the image(s) to the Assets folder
     var cardItems: [CardItem] = [
-        CardItem(name: "Mufasa", age: "17", status: "Leader", state: "Dead", notes: "Betrayed and killed by his spieful brother Scar.", imageString: "lion-wallpaper", opacityDouble: 0.8),
+        CardItem(name: "Mufasa", age: "17", status: "Leader", state: "Dead", notes: "Betrayed and killed by his spiteful brother Scar.", imageString: "lion-wallpaper", opacityDouble: 0.8),
         CardItem(name: "Simba", age: "6", status: "In Exile", state: "Alive", notes: "Was almost killed by his uncle Scar, and was forced into exile.", imageString: "african lion", opacityDouble: 0.8),
         CardItem(name: "Scar", age: "18", status: "Ruler", state: "Alive", notes: "A treacherous uncle and brother who would kill his family for the throne", imageString: "lion_bloody", opacityDouble: 0.8),
         CardItem(name: "Ada", age: "Eternal", status: "Spirit", state: "Omnipresent", notes: "An ancient guardian spirit of the forests known to appear in different forms.", imageString: "african scenery", opacityDouble: 0.8)]
@@ -114,60 +114,12 @@ struct ContentView: View {
                     }
                 }.listStyle(.plain)
 
-//                    Button {
-//                        imageSize = Double.random(in: 20...135)
-//
-//                        print("I was clicked")
-//                    } label: {
-//                        HStack{
-//                            Image(systemName: "car").resizable().frame(width: imageSize, height: imageSize).foregroundColor(Color.white)
-//                            Text("Car Size: \(Int(imageSize.nextDown))").foregroundColor(Color.white)
-//
-//                        }
-//                    }
-//                    .padding(.top)
-//
-//
-//                }
-//                .padding()
-//            }
         }
         .ignoresSafeArea()
         
         
     }
 }
-
-
-
-struct ContentView2: View {
-    let items = Array(1...10) // Sample data
-    @State private var selectedItem: Int = 0
-
-    var body: some View {
-        ScrollView(.horizontal, showsIndicators: true) {
-            HStack(spacing: 20) {
-                ForEach(items, id: \.self) { item in
-                    Text("\(item)")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .frame(width: 100, height: 100)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                        .scaleEffect(item == selectedItem ? 1.5 : 1)
-                        .onTapGesture {
-                            withAnimation {
-                                selectedItem = item
-                            }
-                        }
-                }
-            }
-            .padding()
-        }
-    }
-}
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
