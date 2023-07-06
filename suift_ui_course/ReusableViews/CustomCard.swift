@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct CustomCard: View {
+struct CustomCard: View, Identifiable {
+    var id = UUID()
     @State private var isHidden = true
     var name: String = ""
     var age: String = ""

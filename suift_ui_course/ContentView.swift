@@ -13,6 +13,8 @@ struct ContentView: View {
     @State var opacityNumber: Double = 0.8
     @State private var isToggled = false
       @State private var buttonText = "To Remove Card Opacity, Click Here"
+ 
+    
     var body: some View {
         let names: String = "Okechukwu"
        
@@ -37,7 +39,7 @@ struct ContentView: View {
                         }
                         
                     }.padding(.all, 8.0).background(Color.white).cornerRadius(15).opacity(opacityNumber)
-             
+     
                     /// Grouped CustomCard: Will use a looop for the view later
                     Group{
                         CustomCard(name: "Mufasa", age: "17", status: "Leader", state: "Dead", notes: "Betrayed and killed by his spieful brother Scar.", imageString: "lion-wallpaper", opacityDouble: opacityNumber)
