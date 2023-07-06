@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD68B4F52A573FD0008C4670 /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD68B4F42A573FD0008C4670 /* CardInfo.swift */; };
 		CD6C1B202A509C59001C9230 /* suift_ui_courseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C1B1F2A509C59001C9230 /* suift_ui_courseApp.swift */; };
 		CD6C1B222A509C59001C9230 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C1B212A509C59001C9230 /* ContentView.swift */; };
 		CD6C1B242A509C5D001C9230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6C1B232A509C5D001C9230 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD68B4F42A573FD0008C4670 /* CardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
 		CD6C1B1C2A509C59001C9230 /* suift_ui_course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = suift_ui_course.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6C1B1F2A509C59001C9230 /* suift_ui_courseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = suift_ui_courseApp.swift; sourceTree = "<group>"; };
 		CD6C1B212A509C59001C9230 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 		CD6C1B1E2A509C59001C9230 /* suift_ui_course */ = {
 			isa = PBXGroup;
 			children = (
-				CDCEE60F2A54DB980032ECD7 /* ReusableViews */,
+				CDCEE60F2A54DB980032ECD7 /* Reusables */,
 				CD6C1B1F2A509C59001C9230 /* suift_ui_courseApp.swift */,
 				CD6C1B212A509C59001C9230 /* ContentView.swift */,
 				CD6C1B232A509C5D001C9230 /* Assets.xcassets */,
@@ -72,12 +74,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CDCEE60F2A54DB980032ECD7 /* ReusableViews */ = {
+		CDCEE60F2A54DB980032ECD7 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
 				CDCEE60D2A54DA3E0032ECD7 /* CustomCard.swift */,
+				CD68B4F42A573FD0008C4670 /* CardInfo.swift */,
 			);
-			path = ReusableViews;
+			path = Reusables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +156,7 @@
 				CD6C1B222A509C59001C9230 /* ContentView.swift in Sources */,
 				CDCEE60E2A54DA3E0032ECD7 /* CustomCard.swift in Sources */,
 				CD6C1B202A509C59001C9230 /* suift_ui_courseApp.swift in Sources */,
+				CD68B4F52A573FD0008C4670 /* CardInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
