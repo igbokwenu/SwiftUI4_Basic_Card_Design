@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0DA8692A58C227003999AE /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0DA8682A58C227003999AE /* MenuList.swift */; };
+		CD0DA86B2A58D232003999AE /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0DA86A2A58D232003999AE /* Buttons.swift */; };
 		CD68B4F52A573FD0008C4670 /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD68B4F42A573FD0008C4670 /* CardInfo.swift */; };
 		CD68B4F72A579BE2008C4670 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD68B4F62A579BE2008C4670 /* SplashScreenView.swift */; };
 		CD6C1B202A509C59001C9230 /* suift_ui_courseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C1B1F2A509C59001C9230 /* suift_ui_courseApp.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD0DA8682A58C227003999AE /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
+		CD0DA86A2A58D232003999AE /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		CD68B4F42A573FD0008C4670 /* CardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
 		CD68B4F62A579BE2008C4670 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		CD6C1B1C2A509C59001C9230 /* suift_ui_course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = suift_ui_course.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD0DA8672A58C17E003999AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD6C1B212A509C59001C9230 /* ContentView.swift */,
+				CD68B4F62A579BE2008C4670 /* SplashScreenView.swift */,
+				CD0DA8682A58C227003999AE /* MenuList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CD6C1B132A509C59001C9230 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +72,9 @@
 		CD6C1B1E2A509C59001C9230 /* suift_ui_course */ = {
 			isa = PBXGroup;
 			children = (
+				CD0DA8672A58C17E003999AE /* Views */,
 				CDCEE60F2A54DB980032ECD7 /* Reusables */,
 				CD6C1B1F2A509C59001C9230 /* suift_ui_courseApp.swift */,
-				CD6C1B212A509C59001C9230 /* ContentView.swift */,
-				CD68B4F62A579BE2008C4670 /* SplashScreenView.swift */,
 				CD6C1B232A509C5D001C9230 /* Assets.xcassets */,
 				CD6C1B252A509C5D001C9230 /* suift_ui_course.entitlements */,
 				CD6C1B262A509C5D001C9230 /* Preview Content */,
@@ -82,6 +95,7 @@
 			children = (
 				CDCEE60D2A54DA3E0032ECD7 /* CustomCard.swift */,
 				CD68B4F42A573FD0008C4670 /* CardInfo.swift */,
+				CD0DA86A2A58D232003999AE /* Buttons.swift */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -156,10 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0DA86B2A58D232003999AE /* Buttons.swift in Sources */,
 				CD6C1B222A509C59001C9230 /* ContentView.swift in Sources */,
 				CDCEE60E2A54DA3E0032ECD7 /* CustomCard.swift in Sources */,
 				CD68B4F72A579BE2008C4670 /* SplashScreenView.swift in Sources */,
 				CD6C1B202A509C59001C9230 /* suift_ui_courseApp.swift in Sources */,
+				CD0DA8692A58C227003999AE /* MenuList.swift in Sources */,
 				CD68B4F52A573FD0008C4670 /* CardInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

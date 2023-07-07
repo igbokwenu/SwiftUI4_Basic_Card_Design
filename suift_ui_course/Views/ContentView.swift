@@ -95,18 +95,20 @@ struct ContentView: View {
                                     .fontWeight(.bold).foregroundColor(Color.white)
                                     .multilineTextAlignment(.center)
                                     .padding(.bottom)
-            
-            
-            
-            
-                                Button("Change Year") {
-                                        year = Int.random(in: 1820...1967)
-                                        print("Button pressed")
-            
+                                ReusableButton (buttonText: "Change Year", buttonForegroundColor: Color.black, buttonBackgroundColor: Color.white) {
+                                    year = Int.random(in: 1820...1967)
+                                    
+        
                                 }
-                                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                                .background(Color.white)
-                                .buttonStyle(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=Button Style@*/DefaultButtonStyle()/*@END_MENU_TOKEN@*/).cornerRadius(10)
+                                
+//                                Button("Change Year") {
+//                                        year = Int.random(in: 1820...1967)
+//                                        
+//            
+//                                }
+//                                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+//                                .background(Color.white)
+//                                .buttonStyle(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=Button Style@*/DefaultButtonStyle()/*@END_MENU_TOKEN@*/).cornerRadius(10)
                                 Spacer().frame(height: 30)
                                     
                             }.listRowBackground(Color(.clear))
