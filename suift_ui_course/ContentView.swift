@@ -31,7 +31,7 @@ struct ContentView: View {
                 if isHidden {
                     Color.clear
                 } else {
-                    Text("Designed by Okechukwu \(String(year))©").font(.title3).foregroundColor(.white).onAppear {
+                    Text("A Project by Okechukwu \(String(year))©").font(.title3).foregroundColor(.white).onAppear {
                             withAnimation(Animation.easeInOut(duration: 1.0).delay(2.0)) {
                                 isHidden.toggle()
                             }

@@ -11,6 +11,8 @@ struct CustomCard: View {
 
     
     @State private var isHidden = true
+    @State private var delayDouble: Double = 2.5
+    @State private var durationDouble: Double = 1.0
     var name: String = ""
     var age: String = ""
     var status: String = ""
@@ -76,8 +78,10 @@ struct CustomCard: View {
                     .frame(width: 10, height: 60)
                     .opacity(0)
                     .onAppear {
-                        withAnimation(Animation.easeInOut(duration: 1.0).delay(2.5)) {
+                        withAnimation(Animation.easeInOut(duration: durationDouble).delay(delayDouble)) {
                             isHidden.toggle()
+                            delayDouble = 0.0
+                            durationDouble = 0.0
                         }
                     }
                             }
