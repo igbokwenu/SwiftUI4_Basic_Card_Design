@@ -27,6 +27,10 @@ struct MenuList: View {
                 item = Int.random(in: 0...4)
                 itemList.append(videos[item])
             }
+            ReusableButton (buttonText: "Remove Last Item", buttonBackgroundColor: Color.black) {
+                item = Int.random(in: 0...4)
+                itemList.popLast()
+            }
            
                 Spacer().frame(height: 30)
         }
