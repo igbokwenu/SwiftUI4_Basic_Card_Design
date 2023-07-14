@@ -29,7 +29,7 @@ struct MenuList: View {
             }
             ReusableButton (buttonText: "Remove Last Item", buttonBackgroundColor: Color.black) {
                 item = Int.random(in: 0...4)
-                itemList.popLast()
+                _ = itemList.popLast()
             }
            
                 Spacer().frame(height: 30)
