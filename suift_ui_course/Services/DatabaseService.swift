@@ -9,6 +9,7 @@ import Foundation
 
 struct Database {
     func getData() -> [CardItem] {
+        //Here you can add your own card by specifying your own card details to expand the list. You can send me a pull request to add your expansion or modifications to the main branch. Use real life pictures to represent your favourite cartoon characters and do not forget to add the image(s) to the Assets folder
         return [
             CardItem(name: "Mufasa", age: "17", status: "Leader", state: "Dead", notes: "Betrayed and killed by his spiteful brother Scar.", imageString: "lion-wallpaper", opacityDouble: 0.8),
             CardItem(name: "Simba", age: "6", status: "In Exile", state: "Alive", notes: "Was almost killed by his uncle Scar, and was forced into exile.", imageString: "african lion", opacityDouble: 0.8),
