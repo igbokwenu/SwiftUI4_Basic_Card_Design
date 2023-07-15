@@ -15,6 +15,7 @@
 		CD6C1B222A509C59001C9230 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C1B212A509C59001C9230 /* ContentView.swift */; };
 		CD6C1B242A509C5D001C9230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6C1B232A509C5D001C9230 /* Assets.xcassets */; };
 		CD6C1B282A509C5D001C9230 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6C1B272A509C5D001C9230 /* Preview Assets.xcassets */; };
+		CDA6C3A72A621896005F0B16 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA6C3A62A621896005F0B16 /* DatabaseService.swift */; };
 		CDCEE60E2A54DA3E0032ECD7 /* CustomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEE60D2A54DA3E0032ECD7 /* CustomCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		CD6C1B232A509C5D001C9230 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD6C1B252A509C5D001C9230 /* suift_ui_course.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = suift_ui_course.entitlements; sourceTree = "<group>"; };
 		CD6C1B272A509C5D001C9230 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CDA6C3A62A621896005F0B16 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		CDCEE60D2A54DA3E0032ECD7 /* CustomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,9 @@
 		CD6C1B1E2A509C59001C9230 /* suift_ui_course */ = {
 			isa = PBXGroup;
 			children = (
+				CDA6C3A52A62186F005F0B16 /* Services */,
+				CDA6C3A42A621819005F0B16 /* Model */,
+				CDA6C3A32A6217BE005F0B16 /* ViewModel */,
 				CD0DA8672A58C17E003999AE /* Views */,
 				CDCEE60F2A54DB980032ECD7 /* Reusables */,
 				CD6C1B1F2A509C59001C9230 /* suift_ui_courseApp.swift */,
@@ -90,12 +95,34 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CDA6C3A32A6217BE005F0B16 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD0DA86A2A58D232003999AE /* Buttons.swift */,
+				CDCEE60D2A54DA3E0032ECD7 /* CustomCard.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDA6C3A42A621819005F0B16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD68B4F42A573FD0008C4670 /* CardInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDA6C3A52A62186F005F0B16 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CDA6C3A62A621896005F0B16 /* DatabaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CDCEE60F2A54DB980032ECD7 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
-				CDCEE60D2A54DA3E0032ECD7 /* CustomCard.swift */,
-				CD68B4F42A573FD0008C4670 /* CardInfo.swift */,
-				CD0DA86A2A58D232003999AE /* Buttons.swift */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -176,6 +203,7 @@
 				CD68B4F72A579BE2008C4670 /* SplashScreenView.swift in Sources */,
 				CD6C1B202A509C59001C9230 /* suift_ui_courseApp.swift in Sources */,
 				CD0DA8692A58C227003999AE /* MenuList.swift in Sources */,
+				CDA6C3A72A621896005F0B16 /* DatabaseService.swift in Sources */,
 				CD68B4F52A573FD0008C4670 /* CardInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
