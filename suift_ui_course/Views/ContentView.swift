@@ -96,6 +96,7 @@ struct ContentView: View {
                                     
         
                                 }
+
                                 Spacer().frame(height: 30)
                                     
                             }.listRowBackground(Color(.clear))

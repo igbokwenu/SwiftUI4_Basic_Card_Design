@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
 // The Identifiable protocol lets the system know that this structure should conform to the Identifiable protocol
 struct CardItem: Identifiable {
+    
     /* The id property below makes this structure to actually conform to the Identifiable protocol by creating a variable of type UUID and assigning each instance of the CardItem a universal unique ID (Thats's what the = UUID() does). This will help swift sort out the items in a loop.
     */
     var id: UUID = UUID()

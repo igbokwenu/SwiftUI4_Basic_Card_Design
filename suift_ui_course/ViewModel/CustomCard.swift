@@ -13,6 +13,7 @@ struct CustomCard: View {
     @State private var isHidden = true
     @State private var delayDouble: Double = 2.5
     @State private var durationDouble: Double = 1.0
+    @StateObject private var opacityModel = OpacityModel()
     var name: String = ""
     var age: String = ""
     var status: String = ""

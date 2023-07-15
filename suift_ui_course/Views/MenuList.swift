@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MenuList: View {
+    @StateObject private var opacityNumber = OpacityModel()
     var videos: [String] = ["The death of Mufasa", "Scar tries to kill Simba", "Scar takes over the throne", "Simba returns", "Simba confronts Scar"]
     @State private var itemList: [String] = []
     @State var item: Int = 0
@@ -23,6 +24,7 @@ struct MenuList: View {
             List(itemList, id: \.self) { item in
                           Text(item)
                       }
+            Text("\(opacityNumber.opacityDouble)")
             ReusableButton (buttonText: "Randomize and Update List", buttonBackgroundColor: Color.brown) {
                 item = Int.random(in: 0...4)
                 itemList.append(videos[item])
