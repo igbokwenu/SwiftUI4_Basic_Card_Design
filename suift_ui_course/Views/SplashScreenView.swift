@@ -10,7 +10,7 @@ import SwiftUI
 struct SplashScreenView: View {
     @State var isActive : Bool = false
     @State private var size = 0.8
-    @State private var opacity = 0.5
+    @State private var opacity = 0.2
     
     // Customise your SplashScreen here
     var body: some View {
@@ -22,9 +22,6 @@ struct SplashScreenView: View {
                     Image("ToonCardLogoWithTagline")
                         .font(.system(size: 80))
                         .foregroundColor(.red)
-//                    Text("An App by Increase")
-//                        .font(Font.custom("Baskerville-Bold", size: 26))
-//                        .foregroundColor(.black.opacity(0.80))
                 }
                 .scaleEffect(size)
                 .opacity(opacity)
