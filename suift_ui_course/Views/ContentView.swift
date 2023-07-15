@@ -15,7 +15,8 @@ struct ContentView: View {
     @State private var isToggled = false
       @State private var buttonText = "To Remove Card Opacity, Click Here"
     //Here you can add your own card by specifying your own card details to expand the list. You can send me a pull request to add your expansion or modifications to the main branch. Use real life pictures to represent your favourite cartoon characters and do not forget to add the image(s) to the Assets folder
-    var cardItems: [CardItem] = [CardItem]()
+    var database: Database = Database()
+  @State private  var cardItems: [CardItem] = [CardItem]()
     
     
     var body: some View {
@@ -110,7 +111,9 @@ struct ContentView: View {
                             }.listRowBackground(Color(.clear))
                         }
                     }
-                }.listStyle(.plain)
+                }.listStyle(.plain).onAppear{
+                   cardItems = database.getData()
+                }
 
         }
         .ignoresSafeArea()
