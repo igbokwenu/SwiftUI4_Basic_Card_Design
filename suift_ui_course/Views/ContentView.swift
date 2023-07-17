@@ -40,10 +40,9 @@ struct ContentView: View {
             }
 
                 List(cardItems) { item in
+                    // Button ontop placement
                     if let index = cardItems.firstIndex(where: { $0.id == item.id }) {
-                        // Check if it's the first item in the list
                         if index == 0 {
-                            // Place your item at the beginning
                             VStack(alignment: .center) {
                                 Spacer().frame(height: 50)
                                 HStack {
@@ -66,11 +65,10 @@ struct ContentView: View {
                             }.listRowBackground(Color(.clear))
                         }
                         
-                        // Render your custom card here
+                        
                         CustomCard(name: item.name, age: item.age, status: item.status, state: item.state, notes: item.notes, imageString: item.imageString, opacityDouble: opacityNumber)
                             .listRowSeparator(.hidden)
                             .listRowBackground(Color(.clear)).onTapGesture {
-                                // Code to be executed when the view is tapped
                                 if isToggled {
                                     opacityNumber = 0.7
                                     buttonText = "Click To Remove Card Opacity"
@@ -82,11 +80,8 @@ struct ContentView: View {
                                     isToggled.toggle()
                                 }
                             }
-                        
-                        // Check if it's the last item in the list
-                        if index == cardItems.count - 1 {
-                            // Place your item at the end
-                            VStack {
+                        //Button below placement
+                        if index == cardItems.count - 1 {                            VStack {
                                 Text("Designed by Okechukwu in the year \(String(year))")
                                     .fontWeight(.bold).foregroundColor(Color.white)
                                     .multilineTextAlignment(.center)
