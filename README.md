@@ -29,8 +29,9 @@ struct Database {
 
 https://github.com/igbokwenu/ToonCards/assets/68666335/02f8f95d-a101-4f35-a458-e38aab66f068
 
-
-![Simulator Screen Shot - iPhone 14 - 2023-07-17 at 17 49 18](https://github.com/igbokwenu/ToonCards/assets/68666335/aa8ae326-9e40-48d6-a577-42b377692b22) ![Simulator Screen Shot - iPhone 14 - 2023-07-17 at 17 49 45](https://github.com/igbokwenu/ToonCards/assets/68666335/aacdc584-211a-49b0-9c28-8c67ab68f40a) ![Simulator Screen Shot - iPhone 14 - 2023-07-17 at 17 50 02](https://github.com/igbokwenu/ToonCards/assets/68666335/7014bd61-39fa-4b23-a54d-2a8200006185)
+<img src="https://github.com/igbokwenu/ToonCards/assets/68666335/aa8ae326-9e40-48d6-a577-42b377692b22" width="300" > 
+<img src="https://github.com/igbokwenu/ToonCards/assets/68666335/aacdc584-211a-49b0-9c28-8c67ab68f40a" width="300" >
+<img src="https://github.com/igbokwenu/ToonCards/assets/68666335/7014bd61-39fa-4b23-a54d-2a8200006185" width="300" >
 
 
 
