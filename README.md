@@ -29,9 +29,10 @@ struct Database {
 
 https://github.com/igbokwenu/ToonCards/assets/68666335/02f8f95d-a101-4f35-a458-e38aab66f068
 
-<img src="https://github.com/igbokwenu/ToonCards/assets/68666335/aa8ae326-9e40-48d6-a577-42b377692b22" width="300" > 
-<img src="https://github.com/igbokwenu/ToonCards/assets/68666335/aacdc584-211a-49b0-9c28-8c67ab68f40a" width="300" >
-<!-- <img src="https://github.com/igbokwenu/ToonCards/assets/68666335/7014bd61-39fa-4b23-a54d-2a8200006185" width="300" > -->
+<img src="https://github.com/igbokwenu/ToonCards/assets/68666335/74966072-43c1-45c7-aae3-dd57283c600f" width="500" > 
+<img src="https://github.com/igbokwenu/ToonCards/assets/68666335/61039808-29a6-40a5-9251-04fa6d0723e0" width="500" >
+
+
 
 
 
